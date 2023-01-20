@@ -27,22 +27,15 @@ class Node {
     
     remove() {
       // your code here
+      console.log(this.head);
       if (!this.head) {
         return -1;
       }
      else {
-        delete this.head
-        
-       if (!this.head) {
-        return {} 
-       } else {
-         this.head = this.head.next;
-         this.tail = this.tail.next;
-         console.log(this)
-       }
+        this.head = this.head.next;
+       
      }
       // this.tail = newNode;
-      
     }
     }
   
@@ -53,13 +46,15 @@ class Node {
   queue.add(5);
   // console.log(queue.remove());
   // => 3
+  queue.remove()
+  console.log("hello");
   console.log(queue);
   // queue.add(2);
   // queue.add(7);
   console.log(queue.remove());
   // => 5
   
-  console.log(queue.remove());
+//   console.log(queue.remove());
   // => 2
   
   // console.log(queue.remove());
