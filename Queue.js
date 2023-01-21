@@ -1,71 +1,61 @@
-// Start with your code from LinkedList challenge.
 class Node {
-    constructor(value) {
-      this.value = value;
+    constructor(val) {
+      this.val = val;
       this.next = null;
     }
   }
   
   class Queue {
-    constructor () {
-    this.head = 0;
-    this.tail = 0;
+    constructor() {
+      this.head = null;
+      this.tail = null;
+      this.length = 0;
     }
     add(number) {
-      // your code here
-     let newNode = new Node(number);
+      const newNode = new Node(number);
   
       if (!this.head) {
         this.head = newNode;
         this.tail = newNode;
-        return;
+      } else {
+        this.tail.next = newNode;
+        this.tail = newNode;
       }
   
-      this.tail.next = newNode;
-      this.tail = newNode;
+      this.length++;
+      return this;
     }
-    
     remove() {
-      // your code here
-      if (!this.head) {
-        return -1;
-      }
-     else {
-        delete this.head
-        
-       if (!this.head) {
-        return {} 
-       } else {
-         this.head = this.head.next;
-         this.tail = this.tail.next;
-         console.log(this)
-       }
-     }
-      // this.tail = newNode;
-      
-    }
-    }
+      if (!this.head) return -1;
+      if (this.head === this.tail) this.last = null;
+      let temp = this.head;
+      this.head = this.head.next;
   
+      this.length--;
+      return temp.val;
+    }
+  }
   
   const queue = new Queue();
   
   queue.add(3);
   queue.add(5);
-  // console.log(queue.remove());
+  console.log(queue.remove());
   // => 3
   console.log(queue);
-  // queue.add(2);
-  // queue.add(7);
+  queue.add(2);
+  queue.add(7);
   console.log(queue.remove());
   // => 5
   
   console.log(queue.remove());
   // => 2
   
-  // console.log(queue.remove());
+  console.log(queue.remove());
   // => 7
   
-  // console.log(queue.remove());
+  console.log(queue.remove());
   // => -1
   console.log(queue);
   
+  module.exports = Queue;
