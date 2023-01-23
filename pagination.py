@@ -6,7 +6,7 @@ class Server:
     def __init__(self):
         self.__dataset = None
 
-    def dataset(self) -> List[List]:
+    def dataset(self):
         """Cached dataset
         """
         if self.__dataset is None:
@@ -17,5 +17,5 @@ class Server:
 
         return self.__dataset
 
-    def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+    def get_page(self, page: int = 1, page_size: int = 10):
             pass
