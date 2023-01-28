@@ -6,3 +6,14 @@ function Bird(name, color) {
   let swan = new Bird();
 swan.name = "Carlos";
 swan.color = "white";
+
+
+let ownProps = [];
+
+for (let property in duck) {
+  if(duck.hasOwnProperty(property)) {
+    ownProps.push(property);
+  }
+}
+
+console.log(ownProps);
