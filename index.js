@@ -29,4 +29,3 @@ const getCourses=async()=>{
 const results=await Course.find({}, {name:1, _id:0})
 console.log(results);
 }
-getCourses()
