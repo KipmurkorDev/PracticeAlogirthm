@@ -1,4 +1,4 @@
-const Live = require('../src/old.js');
+const Live = require('../old.js');
 const Adv = require('../dist/advanced/index');
 const isAdv = process.argv.length > 2 && process.argv[2] == '-ad';
 
