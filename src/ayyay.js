@@ -1,13 +1,13 @@
 import mongoose from "mongoose"
 import { Pagination } from "./Pagination";
 
-type FilterType = 'equal' | 'like' | 'gt' | 'lt'
+// type FilterType = 'equal' | 'like' | 'gt' | 'lt'
 
-export type Filter = {
-    key: string,
-    type: FilterType,
-    value: string | number
-}
+// export type Filter = {
+//     key: string,
+//     type: FilterType,
+//     value: string | number
+// }
 
 
 
