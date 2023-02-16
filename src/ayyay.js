@@ -11,15 +11,9 @@ import { Pagination } from "./Pagination";
 
 
 
-const FilterFunctionMapping: { [k in FilterType]: (key: string, val: string | number) => any } = {
-    equal: (k, v) => { return { [k]: v } },
-    gt: (k, v) => { return { [k]: { $gt: v } } },
-    lt: (k, v) => { return { [k]: { $lt: v } } },
-    like: (k, v) => { return { [k]: { $regex: v } } },
-}
 
 
-export function createAggregation(prj_id: number, collection_id: string, pagination: Pagination, filters: Filter[]) {
+export function createAggregation(prj_id, collection_id,  pagination, filters) {
 
     const collectionObject = new mongoose.Types.ObjectId(collection_id);
 
