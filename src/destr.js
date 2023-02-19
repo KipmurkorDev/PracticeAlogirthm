@@ -62,3 +62,10 @@ function addDivToFooter() {
   const headerSection = document.querySelector('footer');
   headerSection.appendChild(newDiv)
 }
+
+
+function Mouse() {
+    this.favoriteFood = 'cheese';
+  }
+  
+  Mouse.prototype = rodent;
