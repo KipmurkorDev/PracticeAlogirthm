@@ -27,3 +27,16 @@ const HIGH_TEMPERATURES = {
   const letsRoll = car.drive;
   
   letsRoll();
+  var iceCreamEaten = 1;
+
+function consume (numberOfGallons) {
+  var result = iceCreamEaten + numberOfGallons;
+
+  function updateTotals (newTotal) {
+    iceCreamEaten = result;
+  }
+
+  updateTotals();
+}
+
+consume(3);
