@@ -9,18 +9,31 @@ const duck = {
     feet: 'webbed'
   };
   
-  const platypus = Object.assign({}, duck, beaver, otter);
+  function Basketball(color) {
+    return {
+      color: color,
+      numDots: 35000
+    };
+  }
+  function CoffeeMaker(object) {
+    let needsRefill = false;
   
-  console.log(platypus);
-  const duck = {
-    hasBill: true
-  };
-  const beaver = {
-    hasTail: true
-  };
-  const otter = {
-    hasFur: true,
-    feet: 'webbed'
-  };
-  
-  const platypus = Object.assign(duck, beaver, otter);
+    return Object.assign({}, object, {
+      pourAll: function () {
+        needsRefill = true;
+      },
+      isEmpty: function () {
+        return needsRefill;
+      }
+    });
+  }
+
+ const newobtc= {
+    style: 'percolator',
+    pourAll: function () {
+      needsRefill = true;
+    },
+    isEmpty: function () {
+      return needsRefill;
+    }
+  }
