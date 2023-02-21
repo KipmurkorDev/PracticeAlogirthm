@@ -37,3 +37,9 @@ const duck = {
       return needsRefill;
     }
   }
+  let developer = {
+    name: 'Veronika',
+    getName: function () {
+      return this.name;
+    }
+  };
