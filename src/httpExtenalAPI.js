@@ -39,3 +39,30 @@ cookies[m[1].trim()] = (m[2] || '').trim();
 });
 response.end("Cookie set: " + cookies.toString());
 }).listen(8080);
+
+// check the length of an object
+var user = {
+    first_name: "John",
+    last_name: "Smith",
+    age: "38",
+    department: "Software"
+    };
+    console.log(user);
+    console.log(Object.keys(user).length);
+    delete user.last_name;
+    console.log(user);
+    console.log(Object.keys(user).length);
+
+
+    // directory to json 
+
+    var dirToJson = require('dir-to-json');
+ 
+dirToJson( "./album", function( err, dirTree ){
+    if( err ){
+        throw err;
+    }else{
+        console.log( dirTree );
+    }
+});
+ 
