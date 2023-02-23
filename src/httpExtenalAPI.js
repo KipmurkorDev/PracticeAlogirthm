@@ -89,3 +89,9 @@ var gzip = zlib.createGzip();
 var r = fs.createReadStream('./demofile.txt');
 var w = fs.createWriteStream('./demogzipfile.txt.gz');
 r.pipe(gzip).pipe(w);
+
+//
+const server = http.createServer(requestListener);
+server.listen(port, host, () => {
+    console.log(`Server is running on http://${host}:${port}`);
+});
