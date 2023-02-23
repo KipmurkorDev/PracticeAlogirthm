@@ -133,3 +133,19 @@ server.listen(port2, (err) => {
 
   console.log(`server is listening on ${port}`)
 })
+
+const express = require('express')
+const app = express()
+const port4 = 3000
+
+app.get('/', (request, response) => {
+  response.send('Hello from Express!')
+})
+
+app.listen(port4, (err) => {
+  if (err) {
+    return console.log('something bad happened', err)
+  }
+
+  console.log(`server is listening on ${port}`)
+})
