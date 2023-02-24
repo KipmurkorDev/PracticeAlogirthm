@@ -74,3 +74,14 @@ fs.writeFile('/Users/joe/test.txt', content, err => {
   }
   // file written successfully
 });
+
+const fs = require('fs');
+
+const content3 = 'Some content!';
+
+try {
+  fs.writeFileSync('/Users/joe/test.txt', content);
+  // file written successfully
+} catch (err) {
+  console.error(err);
+}
