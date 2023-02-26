@@ -6,3 +6,11 @@ process.on('exit', code => {
 	console.log('Exited with status code:', code);
 });
 console.log('Execution Completed');
+
+
+
+process.stdout.write('Hello World!' + '\n');
+
+process.argv.forEach(function(val, index, array) {
+	console.log(index + ': ' + val);
+});
