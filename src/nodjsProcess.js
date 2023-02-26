@@ -28,3 +28,14 @@ function prepareProcess(name, disposeCallback) {
     // dispose when child process is disconnected
     process.on('disconnect', () => disposeCallback());
    }
+
+   stopSignals.forEach(function (signal) {
+    process.on(signal, function () {
+      console.log(`Got ${signal}, stopping workers...`);
+      stopping = true;
+      cluster.disconnect(function () {
+        console.log("All workers stopped, exiting.");
+        process.exit(0);
+      });
+    });
+  });
