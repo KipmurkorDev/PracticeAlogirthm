@@ -53,3 +53,17 @@ for (var key in versions) {
  
 // Printing count value
 console.log("\nTotal no of values available = " + no_versions);
+
+var process = require('process');
+  
+// Define a funtion that will be triggered when an application exits 
+process.on('exit', code => {
+	setTimeout(() => {
+		console.log('Will not get displayed');
+	}, 0);
+
+	console.log('Exited with status code:', code);
+});
+
+// Run an application 
+console.log('Execution Completed');
