@@ -37,3 +37,19 @@ if (stderr) {
     console.log(stdout);
      });
     
+     // Declaring a counter variable
+var no_versions = 0;
+ 
+// Calling process.versions property
+var versions = process.versions;
+ 
+// Iterating through returned data
+for (var key in versions) {
+     
+  // Printing key and its versions
+  console.log(key + "\t".repeat(2-Math.floor((key.length-8)/8)) + versions[key]);
+  no_versions++;
+}
+ 
+// Printing count value
+console.log("\nTotal no of values available = " + no_versions);
