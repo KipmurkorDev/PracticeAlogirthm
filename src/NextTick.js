@@ -24,3 +24,16 @@ console.log('this is the process version --> ' + process.version);
 
 // It will return the type of OS we are using at that time.
 console.log('current OS we are using --> ' + process.platform);
+
+exec('ls -lh', (error, stdout, stderr) => {
+    if (err) {
+console.error(err);
+     return;
+ }
+if (stderr) {
+    console.error(stderr);
+      return;
+}
+    console.log(stdout);
+     });
+    
