@@ -12,3 +12,14 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
+
+function isAdult(user) {
+    return user.age >= 18;
+  }
+  
+  const justine = {
+    name: 'Justine',
+    age: 'Secret!',
+  };
+  
+  const isJustineAnAdult= isAdult(justine, "I shouldn't be here!");
