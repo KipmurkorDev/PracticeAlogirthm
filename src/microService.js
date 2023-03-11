@@ -15,3 +15,17 @@ app.listen(port, () =>
     `Message service running on port ${port}, http://localhost:${port}`
   )
 );
+app.get('/tweet', async (req, res) => {
+    const response = await axios.get('http://localhost:8000/');
+  
+    try {
+      console.log(response.data);
+  
+      res.send(response.data);
+    } catch (error) {
+      console.log(error);
+  
+      res.send(500);
+    }
+  });
+  
