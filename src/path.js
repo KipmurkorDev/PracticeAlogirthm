@@ -10,9 +10,9 @@ const fs = require('fs');
 
 const folderPath = '/Users/kipmurkoremmanuel/Desktop'
 
-const folerPaths=fs.readdirSync(folderPath).map(fileName => {
+const folderPaths=fs.readdirSync(folderPath).map(fileName => {
     return path.join(folderPath, fileName);
   });
 
 
-  console.log(folerPaths);
+  console.log(folderPaths);
