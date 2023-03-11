@@ -55,3 +55,9 @@ app.get('/', (req, res) => {
 app.listen(port, () =>
   console.log(`Tweet service running on ${port}, http://localhost:${port}`)
 );
+
+const eventEmitter = new EventEmitter();
+eventEmitter.on('start', () => {
+    console.log('started');
+  });
+  eventEmitter.emit('start');
