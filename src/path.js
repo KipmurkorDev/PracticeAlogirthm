@@ -17,7 +17,17 @@ const folderPaths=fs.readdirSync(folderPath).map(fileName => {
     return path.join(folderPath, fileName);
   }).filter(isFile)
 
- 
+//  remove folder
+const fs = require('fs');
+
+fs.rmdir(dir, err => {
+  if (err) {
+    throw err;
+  }
+
+  console.log(`${dir} is deleted!`);
+});
+
   
 
   console.log(folderPaths);
