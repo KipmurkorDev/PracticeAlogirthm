@@ -15,3 +15,16 @@ process.nextTick(() => {
     console.log("Even after nextTick is executed");  
  }, 0);  
  console.log("First text to be printed"); 
+
+ process.on('beforeExit', code => {
+    // Can make asynchronous calls
+    setTimeout(() => {
+      console.log(`Process will exit with code: ${code}`)
+      process.exit(code)
+    }, 1000)
+  });
+  process.on('exit', code => {
+    // Only synchronous calls
+    console.log(`Process exited with code: ${code}`)
+  });  
+  console.log('After this, process will try to exit');
