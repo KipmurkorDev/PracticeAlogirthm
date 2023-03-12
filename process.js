@@ -28,3 +28,16 @@ process.nextTick(() => {
     console.log(`Process exited with code: ${code}`)
   });  
   console.log('After this, process will try to exit');
+
+
+  process.on('exit', () => {  
+    console.log('Perform any clean up like saving or releasing any memory');  
+});  
+// process.on('uncaughtException', (err) => {  
+//     console.error('An unhandled exception is raised. Look at stack for more details');  
+//     console.error(err.stack);
+//     process.exit(1);
+// });
+// var test = {};  
+// //raises an exception.  
+// test.unKnownObject.toString();
