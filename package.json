@@ -1,0 +1,23 @@
+{
+  "name": "practicealgorithim",
+  "version": "1.0.0",
+  "description": "both python and javascripts",
+  "main": "Pop_push.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/KipmurkorDev/PracticeAlogirthm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KipmurkorDev/PracticeAlogirthm/issues"
+  },
+  "homepage": "https://github.com/KipmurkorDev/PracticeAlogirthm#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.10.0"
+  }
+}
