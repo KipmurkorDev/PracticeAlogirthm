@@ -4,11 +4,12 @@ SUPA_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6I
 const client = Supabase.createClient(SUPA_URL, SUPA_KEY);
 
  const getcredetialMockFuc= async(prj_id)=>{
-    const {data, error}=await client.rpc('add_users', {id:11, firstname:"emmanue", lastname:"kim", email:"emamanan@kieme.com",access_token:"78828288282", status:false, job:"software developer", isstudent:false, inactivity:false, deleted:false} )
-    console.log(error);
+    const {data, error}=await client.rpc('add_user', {id:11, firstname:"emmanue", lastname:"kim", user_email:"emamanan@kieme.com",access_token:"78828288282", status:'kim8', job:"software developer", isstudent:false, inactivity:1, deleted:false} )
+    console.log(data);
 }
 
-
-
 getcredetialMockFuc()
+
+
+
 
