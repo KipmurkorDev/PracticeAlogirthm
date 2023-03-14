@@ -1,5 +1,5 @@
 
-const express=require('express')
+// const express=require('express')
 
 const app = express()
 console.log(`Worker ${process.pid} started`);
@@ -24,3 +24,26 @@ let port=3000
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 })
+
+function addCount() {
+    // Variable declaration
+    var sum = 0;
+    
+    for (var i = 1; i < 100000; i++) {
+      // Adding i to the sum variable
+      sum += i;
+    }
+    
+    // Return sum value
+    return sum;
+  }
+    
+  // Starts the timer
+  console.time('slowApi');
+    
+  // Function call
+  addCount();
+    
+  // Ends the timer and print the time
+  // taken by the piece of code
+  console.timeEnd('slowApi');
