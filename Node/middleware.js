@@ -16,3 +16,17 @@ module.exports = function (req, res, next) {
   return res.status(401)
 
 };
+const fs = require('fs');
+const shortid = require('shortid');
+// To generate a unique API KEY, use shortid.generate()
+const LINE_ENDING = require('os').EOL;
+
+
+module.exports = function (req, res) {
+  let newKey=shortid.generate()+LINE_ENDING;
+  fs.appendFile('valid-keys.txt', newKey, function (err) {
+    if (err) throw err;
+    res.status(201).send({"apiKey":newKey})
+  });
+};
+
