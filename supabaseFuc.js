@@ -13,3 +13,39 @@ getcredetialMockFuc()
 
 
 
+async function authenticate(access_token, refresh_token) {
+    // //* Check access token with supabase
+    //  const res= await supabase.signInWithEmail()
+    const result = await supabase.authClient.auth.api.getUser(access_token);
+    console.log(result);
+    //* No errors, return jwt
+    if (!result.error) {
+        const token = await generateJWT(result);
+        return [true, token];
+    }
+
+    //* Error, token expired
+    if (result.error.message.includes('token is expired')) {
+        //* No refresh token, return error
+        if (!refresh_token) return [false, result.error];
+        //* Refresh session from token
+        const session = await supabase.authClient.auth.setSession(refresh_token);
+        //* Error during refresh
+        if (session.error) return [false, session.error];
+
+        //* Check access token with supabase
+        const result = await supabase.authClient.auth.api.getUser(session.session.access_token);
+
+        //* No errors, return jwt
+        if (!result.error) {
+            const token = await generateJWT(result);
+            return [true, token];
+        }
+
+        //* Return error
+        return [false, result.error];
+    }
+
+    //* Return error
+    return [false, result.error];
+}
