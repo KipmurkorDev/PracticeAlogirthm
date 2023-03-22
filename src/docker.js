@@ -15,3 +15,8 @@ app.get('/', (req, res) => {
 app.listen(PORT, HOST, () => {
   console.log(`Running on http://${HOST}:${PORT}`);
 });
+
+function handle(signal) {
+    console.log(`*^!@4=> Received event: ${signal}`)
+ }
+ process.on('SIGHUP', handle)
