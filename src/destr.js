@@ -135,3 +135,10 @@ console.log(arr[indexOfTwo+1]) // 3
 // We can perform many operations on the array, like pushing new values into it
 arr.push(4)
 console.log(arr) // [1,2,3,4]
+let solution = 1;
+
+for (let i = 1; i <= 12; i++) {
+  solution *= i;
+}
+
+console.log(solution);
