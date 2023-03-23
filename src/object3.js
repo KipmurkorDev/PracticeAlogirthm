@@ -11,3 +11,20 @@ function pluck(list, propertyName) {
       return i[propertyName];
     });
   }
+  const duck = {
+    hasBill: true
+  };
+  const beaver = {
+    hasTail: true
+  };
+  const otter = {
+    hasFur: true,
+    feet: 'webbed'
+  };
+  
+  function Basketball(color) {
+    return {
+      color: color,
+      numDots: 35000
+    };
+  }
