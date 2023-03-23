@@ -101,3 +101,16 @@ fs.rmdir(dir, err => {
   
 
   console.log(folderPaths);
+  const Supabase = require('@supabase/supabase-js');
+  const client = Supabase.createClient(process.env.SUPA_URL, process.env.SUPA_KEY);
+  
+   const getcredetialMockFuc= async(prj_id)=>{
+          return await (await client.from('projects').select('*').eq('prj_id', prj_id));
+  }
+  
+  
+  
+  
+  module.exports={
+      getcredetialMockFuc
+  }
