@@ -56,3 +56,18 @@ module.exports = {
     client,
     authClient
 };
+const umbrella = {
+  color: "pink",
+  isOpen: false,
+  open: function() {
+    if(this.isOpen === true) {
+      return "The umbrella is already opened!";
+    } else {
+      this.isOpen = true;
+      return "Julia opens the umbrella!";
+    }
+  }
+}
+
+
+console.log(umbrella.open())
