@@ -214,3 +214,7 @@ for (let property in duck) {
 }
 
 console.log(ownProps);
+const fruits = ['apple', 'banana', 'orange', 'grape', 'lychee'];
+
+console.log(fruits);
+// ['apple', 'banana', 'orange', 'grape', `lychee`]
