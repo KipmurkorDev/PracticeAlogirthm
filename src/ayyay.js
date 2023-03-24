@@ -218,3 +218,14 @@ const fruits = ['apple', 'banana', 'orange', 'grape', 'lychee'];
 
 console.log(fruits);
 // ['apple', 'banana', 'orange', 'grape', `lychee`]
+
+const cat = {
+  age: 2,
+  name: 'Bailey',
+  meow: function () {
+    console.log('Meow!');
+  },
+  greet: function (name) {
+    console.log(`Hello ${name}`);
+  }
+};
