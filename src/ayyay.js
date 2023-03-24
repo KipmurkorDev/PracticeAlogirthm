@@ -229,3 +229,14 @@ const cat = {
     console.log(`Hello ${name}`);
   }
 };
+let originalObject = {
+  favoriteColor: 'red'
+};
+
+function setToBlue(object) {
+  object.favoriteColor = 'blue';
+}
+
+setToBlue(originalObject);
+
+originalObject.favoriteColor;
