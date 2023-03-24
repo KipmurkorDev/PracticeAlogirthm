@@ -114,3 +114,18 @@ fs.rmdir(dir, err => {
   module.exports={
       getcredetialMockFuc
   }
+  const parrot = {
+    group: 'bird',
+    feathers: true,
+    chirp: function () {
+      console.log('Chirp chirp!');
+    }
+  };
+  
+  const pigeon = {
+    group: 'bird',
+    feathers: true,
+    chirp: function () {
+      console.log('Chirp chirp!');
+    }
+  };
