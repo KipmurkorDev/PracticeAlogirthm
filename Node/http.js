@@ -76,7 +76,6 @@ app.get("/heavy", (req, res) => {
 import express from "express";
 
 const port = 3000;
-const app = express();
 
 console.log(`worker pid=${process.pid}`);
 
