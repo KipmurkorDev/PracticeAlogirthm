@@ -1,5 +1,5 @@
 const path=require("path")
-
+const os=require("os")
 console.log(path.sep);
 console.log(path.delimiter);
 // common methhod in path modules
@@ -20,5 +20,13 @@ let pathToFile = path.format({
     dir: 'public_html/home/js',
     base: 'app.js'
 });
+let currentOS = {
+    name: os.type(),
+    architecture: os.arch(),
+    platform: os.platform(),
+    release: os.release(),
+    version: os.version()
+};
 
-console.log(pathToFile);
+console.log(pathToFile, currentOS);
+console.log(os.EOL);
