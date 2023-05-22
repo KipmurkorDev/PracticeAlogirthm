@@ -1,14 +1,5 @@
-const ac = new AbortController();
-
-ac.signal.addEventListener('abort', () => console.log('Aborted!'),
-                           { once: true });
-
-ac.abort();
-
-console.log(ac.signal.aborted);  // Prints Tr
 
 
-console.log("helllo");
 Create or Replace function add_user(firstname varchar,lastname varchar,user_email varchar, access_token varchar, status varchar, job varchar, isstudent boolean,inactivity int, deleted boolean) 
 returns text
 language plpgsql
