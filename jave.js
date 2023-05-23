@@ -27,6 +27,17 @@ let currentOS = {
     release: os.release(),
     version: os.version()
 };
+const EventEmitter = require('events');
 
+const emitter = new EventEmitter();
+
+emitter.on('saved',  (arg) => {
+    console.log(`A saved event occurred: name: ${arg.name}, id: ${arg.id}`);
+});
+
+emitter.emit('saved', {
+    id: 1,
+    name: 'John Doe'
+});
 console.log(pathToFile, currentOS);
 console.log(os.EOL);
