@@ -1,3 +1,8 @@
+
+
+
+
+
 function getTotalX(a, b) {
     // Write your code here
     a.sort((a,b) => a-b)
