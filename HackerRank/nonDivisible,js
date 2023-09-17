@@ -1,0 +1,22 @@
+// Given a set of distinct integers, print the size of a maximal subset of  where the sum of any  numbers in  is not evenly divisible by .
+
+function nonDivisibleSubset(k, s) {
+  // Write your code here
+  const remainders = new Array(k).fill(0);
+
+  for (let num of s) {
+    remainders[num % k]++;
+  }
+
+  let count = Math.min(1, remainders[0]);
+
+  for (let i = 1; i <= k / 2; i++) {
+    count += Math.max(remainders[i], remainders[k - i]);
+  }
+
+  if (k % 2 === 0) {
+    count++;
+  }
+
+  return count;
+}
