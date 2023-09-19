@@ -7,17 +7,30 @@
 // It contains at least one special character. The special characters are: !@#$%^&*()-+
 
 function minimumNumber(n, password) {
-  // Return the minimum number of characters to make the password strong
+  let count = 0;
 
-  if (n < 6) return 6 - n;
-  else if (!/[a-z]/.test(password)) {
-    return 1;
-  } else if (!/[A-Z]/.test(password)) {
-    return 1;
-  } else if (!/[0-9]/.test(password)) {
-    return 1;
+  if (!/[a-z]/.test(password)) {
+    count++;
   }
+
+  if (!/[A-Z]/.test(password)) {
+    count++;
+  }
+
+  if (!/[0-9]/.test(password)) {
+    count++;
+  }
+
   if (!/[!@#$%^&*()-+]/.test(password)) {
-    return 1;
+    count++;
   }
+
+  if (n < 6) {
+    let total = n + count;
+    if (total < 6) {
+      count += 6 - total;
+    }
+  }
+
+  return count;
 }
