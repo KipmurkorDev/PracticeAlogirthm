@@ -5,15 +5,16 @@
 // Given a range of numbered days,  and a number , determine the number of days in the range that are beautiful. Beautiful numbers are defined as numbers where  is evenly divisible by . If a day's value is a beautiful number, it is a beautiful day. Return the number of beautiful days in the range.
 
 function beautifulDays(i, j, k) {
-  // Write your code here
   let count = 0;
-  for (let m = i; m <= j; m++) {
-    let reversedValue = m.toString().split("").reverse().join("");
-    let diffValeu = m - parseInt(reversedValue);
-    console.log(Math.abs(diffValeu));
-    if (Math.abs(diffValeu) % k === 0) {
+
+  for (let day = i; day <= j; day++) {
+    const reversedDay = parseInt(day.toString().split("").reverse().join(""));
+    const difference = Math.abs(day - reversedDay);
+
+    if (difference % k === 0) {
       count++;
     }
   }
+
   return count;
 }
