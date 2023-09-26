@@ -6,23 +6,15 @@
 // Determine the minimum cost of Diksha's gifts.
 function taumBday(b, w, bc, wc, z) {
   // Write your code here
-  let res = 0;
+  const gifts = BigInt(b) + BigInt(w);
 
-  if (bc <= wc) {
-    res += bc * b;
-    if (bc + z <= wc) {
-      res += (bc + z) * w;
-    } else {
-      res += wc * w;
-    }
-  } else {
-    res += wc * w;
-    if (wc + z <= bc) {
-      res += (wc + z) * b;
-    } else {
-      res += bc * b;
-    }
-  }
+  const whiteGifts = gifts * BigInt(wc) + BigInt(b) * BigInt(z);
+  const blackGifts = gifts * BigInt(bc) + BigInt(w) * BigInt(z);
 
-  return res.toString();
+  let min = BigInt(b) * BigInt(bc) + BigInt(w) * BigInt(wc);
+
+  blackGifts < min && (min = blackGifts);
+  whiteGifts < min && (min = whiteGifts);
+
+  return min;
 }
