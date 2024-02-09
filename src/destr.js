@@ -247,8 +247,6 @@ fs.writeFile("/Users/joe/test.txt", content, (err) => {
 
 const fs = require("fs");
 
-const content3 = "Some content!";
-
 try {
   fs.writeFileSync("/Users/joe/test.txt", content);
   // file written successfully
@@ -268,8 +266,6 @@ async function example() {
 }
 example();
 const express = require("express");
-
-const app = express();
 
 const port = process.env.PORT || 8000;
 
@@ -441,8 +437,6 @@ async function example() {
 example();
 
 const fs = require("fs");
-
-const content = "Some content!";
 
 fs.writeFile("/Users/joe/test.txt", content, (err) => {
   if (err) {
