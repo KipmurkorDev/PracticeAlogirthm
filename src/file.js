@@ -47,8 +47,6 @@ const express = require("express");
 const ecstatic = require("ecstatic");
 const http = require("http");
 
-const app = express();
-
 app.use(
   ecstatic({
     root: `${__dirname}/public`,
@@ -146,7 +144,7 @@ for (let i = 1; i <= 12; i++) {
 }
 
 console.log(solution);
-"use strict";
+("use strict");
 
 const express = require("express");
 
@@ -281,8 +279,6 @@ example();
 
 const fs = require("fs");
 
-const content = "Some content!";
-
 fs.writeFile("/Users/joe/test.txt", content, (err) => {
   if (err) {
     console.error(err);
@@ -291,8 +287,6 @@ fs.writeFile("/Users/joe/test.txt", content, (err) => {
 });
 
 const fs = require("fs");
-
-const content3 = "Some content!";
 
 try {
   fs.writeFileSync("/Users/joe/test.txt", content);
@@ -313,8 +307,6 @@ async function example() {
 }
 example();
 const express = require("express");
-
-const app = express();
 
 const port = process.env.PORT || 8000;
 
