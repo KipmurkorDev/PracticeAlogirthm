@@ -29,4 +29,19 @@ function shallowEqual(object1, object2) {
   console.log(shallowEqual(hero1, hero2)); // => true
   console.log(shallowEqual(hero1, hero3)); // => false
   
+  {
+    "name": "Alva Universal Image",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-vsliveshare.vsliveshare"
+        ]
+      }
+    },
+    "features": {
+      "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+        "packages": "xvfb,libnss3-dev,libatk1.0-0,libatk-bridge2.0-0,libgtk-3-0,libgbm-dev"
+      }
+    }
+  }
   
