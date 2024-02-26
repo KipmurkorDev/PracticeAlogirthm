@@ -158,3 +158,45 @@ class Stock extends EventEmitter {
     return this._symbol;
   }
 }
+class Node {
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+  }
+}
+
+class LinkedList {
+  constructor() {
+    this.head = null;
+  }
+
+  // Method to insert a new node at the end of the list
+  append(data) {
+    const newNode = new Node(data);
+    if (!this.head) {
+      this.head = newNode;
+      return;
+    }
+    let current = this.head;
+    while (current.next !== null) {
+      current = current.next;
+    }
+    current.next = newNode;
+  }
+
+  // Method to display the elements of the linked list
+  display() {
+    let current = this.head;
+    while (current !== null) {
+      console.log(current.data);
+      current = current.next;
+    }
+  }
+}
+
+// Example usage
+const myList = new LinkedList();
+myList.append(1);
+myList.append(2);
+myList.append(3);
+myList.display(); // Output: 1, 2, 3
