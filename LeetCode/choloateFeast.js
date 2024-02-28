@@ -372,3 +372,73 @@ myList.append(1);
 myList.append(2);
 myList.append(3);
 myList.display(); // Output: 1, 2, 3
+// Import TensorFlow.js library
+import * as tf from "@tensorflow/tfjs";
+
+// Define the model architecture
+model.add(
+  tf.layers.dense({ units: 10, inputShape: [784], activation: "relu" })
+);
+model.add(tf.layers.dense({ units: 10, activation: "relu" }));
+model.add(tf.layers.dense({ units: 10, activation: "softmax" }));
+
+// Compile the model
+model.compile({
+  optimizer: "sgd",
+  loss: "categoricalCrossentropy",
+  metrics: ["accuracy"],
+});
+
+// Generate some dummy data for training
+const data = tf.randomNormal([100, 784]);
+const labels = tf.randomUniform([100, 10]);
+
+// Train the model
+model.fit(data, labels, {
+  epochs: 10,
+  batchSize: 32,
+  callbacks: {
+    onEpochEnd: (epoch, logs) => {
+      console.log(
+        `Epoch ${epoch + 1}: loss = ${logs.loss}, accuracy = ${logs.acc}`
+      );
+    },
+  },
+});
+// Import TensorFlow.js library
+import * as tf from "@tensorflow/tfjs";
+
+// Generate some dummy data for training
+const numSamples = 100;
+const trueWeights = [2, -3.4];
+const trueBias = 4.2;
+const inputTensor = tf.randomNormal([numSamples, 2]);
+const noise = tf.randomNormal([numSamples, 1]);
+const outputTensor = inputTensor
+  .mul(tf.tensor2d(trueWeights, [2, 1]))
+  .sum(1)
+  .add(tf.scalar(trueBias))
+  .add(noise);
+
+// Define the model architecture
+const model = tf.sequential();
+model.add(tf.layers.dense({ units: 1, inputShape: [2] }));
+
+// Compile the model
+model.compile({ optimizer: "sgd", loss: "meanSquaredError" });
+
+// Train the model
+async function trainModel() {
+  const history = await model.fit(inputTensor, outputTensor, {
+    epochs: 100,
+    callbacks: {
+      onEpochEnd: (epoch, logs) => {
+        console.log(`Epoch ${epoch + 1}: loss = ${logs.loss}`);
+      },
+    },
+  });
+
+  console.log("Training complete.");
+}
+
+// Execute the training
