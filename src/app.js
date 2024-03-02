@@ -79,7 +79,6 @@ const PORT = 8080;
 const HOST = "0.0.0.0";
 
 // App
-const app = express();
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
@@ -238,7 +237,6 @@ async function example() {
 example();
 const express = require("express");
 
-const app = express();
 
 const port = process.env.PORT || 8000;
 
