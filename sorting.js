@@ -5,9 +5,6 @@ const fs = require("fs");
 process.stdin.resume();
 process.stdin.setEncoding("utf-8");
 
-let inputString = "";
-let currentLine = 0;
-
 process.stdin.on("data", function (inputStdin) {
   inputString += inputStdin;
 });
@@ -181,3 +178,28 @@ function main() {
 
   ws.end();
 }
+
+// Function to find the maximum number in an array
+function findMax(arr) {
+  if (arr.length === 0) {
+    // If the array is empty, return null or handle it as you see fit
+    return null;
+  }
+
+  let max = arr[0]; // Initialize max to the first element of the array
+
+  // Loop through the array starting from the second element
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      // If current element is greater than current max, update max
+      max = arr[i];
+    }
+  }
+
+  return max; // Return the maximum number found
+}
+
+// Example usage:
+const numbers = [5, 8, 2, 10, 3];
+const maximum = findMax(numbers);
+console.log("Maximum number is:", maximum); // Output: Maximum number is: 10
