@@ -1014,3 +1014,21 @@ function validateGenre(genre) {
 exports.genreSchema = genreSchema;
 exports.Genre = Genre;
 exports.validate = validateGenre;
+
+class Solution {
+  printLargest(n, arr) {
+    const compare = (x, y) => {
+      const xy = x + y;
+      const yx = y + x;
+      return parseInt(yx) - parseInt(xy);
+    };
+
+    arr.sort(compare);
+
+    let result = arr.join("");
+
+    result = result.replace(/^0+/, "");
+
+    return result || "0";
+  }
+}
