@@ -2,12 +2,11 @@ name: Merge Branch
 
 on:
   push:
-    branches: 
+    branches:
       - new_branch
 
 jobs:
   merge:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -17,4 +16,4 @@ jobs:
       - name: Merge changes
         run: |
           git merge --no-ff ${{ github.event.ref }}
-          git push origin main  # adjust branch name if necessary
+          git push origin main
