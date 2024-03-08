@@ -511,3 +511,14 @@ app.post("/store-goal", (req, res) => {
 });
 
 app.listen(80);
+const ac = new AbortController();
+
+ac.signal.addEventListener("abort", () => console.log("Aborted!"), {
+  once: true,
+});
+
+ac.abort();
+
+console.log(ac.signal.aborted); // Prints Tr
+
+console.log("helllo");
