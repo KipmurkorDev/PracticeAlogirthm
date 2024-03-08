@@ -1,12 +1,12 @@
-const express = require('express');
+const express = require("express");
 
 const app = express();
 
 const port = process.env.PORT || 8000;
 
-const eventEmitter = require('events');
+const eventEmitter = require("events");
 
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
   // Creating an event emitter class
 
   class Twitter extends eventEmitter {
@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
   // postTweet is the name of the event
 
   twitterEmitter.on(
-    'postTweet',
+    "postTweet",
 
     (id, tweet, comments, retweets, likes, date) => {
       const data = {
@@ -49,7 +49,7 @@ app.get('/', (req, res) => {
 
   // Running the callback function which emits the event
 
-  twitterEmitter.emit('postTweet', 1, 'Hello World!', 0, 0, 0, '08-01-2022');
+  twitterEmitter.emit("postTweet", 1, "Hello World!", 0, 0, 0, "08-01-2022");
 });
 
 app.listen(port, () =>
@@ -57,8 +57,19 @@ app.listen(port, () =>
 );
 
 const eventEmitter = new EventEmitter();
-eventEmitter.on('start', () => {
-    console.log('started');
-  });
-  eventEmitter.emit('start');
+eventEmitter.on("start", () => {
+  console.log("started");
+});
+eventEmitter.emit("start");
 
+const ac = new AbortController();
+
+ac.signal.addEventListener("abort", () => console.log("Aborted!"), {
+  once: true,
+});
+
+ac.abort();
+
+console.log(ac.signal.aborted); // Prints Tr
+
+console.log("helllo");
