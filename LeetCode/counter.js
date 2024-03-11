@@ -42,3 +42,16 @@ var expect = function (val) {
  * expect(5).toBe(5); // true
  * expect(5).notToBe(5); // throws "Equal"
  */
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var map = function (arr, fn) {
+  let results = [];
+  for (let i = 0; i < arr.length; i++) {
+    let num = fn(arr[i], i);
+    results.push(num);
+  }
+  return results;
+};
