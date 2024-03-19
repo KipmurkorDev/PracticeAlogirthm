@@ -7,3 +7,13 @@ const palindrome = (str) => {
   }
   return false;
 };
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var removeDuplicates = function (nums) {
+  let arrToSet = new Set(nums);
+  let newArr = [...arrToSet];
+  return newArr;
+};
