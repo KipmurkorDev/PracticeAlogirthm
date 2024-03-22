@@ -49,3 +49,8 @@ var removeDuplicates = function (nums) {
   }
   return index;
 };
+// Prompt the user to enter their name
+var userName = prompt("What is your name?");
+
+// Greet the user
+alert("Hello, " + userName + "! Welcome to our website!");
