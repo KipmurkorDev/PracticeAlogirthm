@@ -35,3 +35,57 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
     console.log(applesOnHouse);
     console.log(orangesOnHouse);
 }
+
+function getTotalX(a, b) {
+    // Function to calculate greatest common divisor (gcd)
+    function gcd(a, b) {
+        while (b) {
+            let temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    // Function to calculate least common multiple (lcm)
+    function lcm(a, b) {
+        return (a * b) / gcd(a, b);
+    }
+
+    // Function to calculate gcd of an array
+    function gcdOfArray(arr) {
+        let result = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            result = gcd(result, arr[i]);
+        }
+        return result;
+    }
+
+    // Function to calculate lcm of an array
+    function lcmOfArray(arr) {
+        let result = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            result = lcm(result, arr[i]);
+        }
+        return result;
+    }
+
+    // Main logic
+    let lcmA = lcmOfArray(a);
+    let gcdB = gcdOfArray(b);
+    
+    let count = 0;
+    let multiple = lcmA;
+    while (multiple <= gcdB) {
+        if (gcdB % multiple === 0) {
+            count++;
+        }
+        multiple += lcmA;
+    }
+    return count;
+}
+
+// Example usage
+let a = [2, 4];
+let b = [16, 32, 96];
+console.log(getTotalX(a, b));  // Output should be 3
