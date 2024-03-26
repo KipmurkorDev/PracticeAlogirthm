@@ -30,3 +30,8 @@ function divisibleSumPairs(n, k, ar) {
   return count;
 }
 let myArray = [1, 2, 3, 4, 5];
+let person = {
+  name: "John",
+  age: 30,
+  city: "New York",
+};
