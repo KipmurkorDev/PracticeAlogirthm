@@ -35,3 +35,6 @@ let person = {
   age: 30,
   city: "New York",
 };
+let myMap = new Map();
+myMap.set("key1", "value1");
+myMap.set("key2", "value2");
