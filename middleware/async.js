@@ -38,3 +38,22 @@ let person = {
 let myMap = new Map();
 myMap.set("key1", "value1");
 myMap.set("key2", "value2");
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var removeDuplicates = function (nums) {
+  let counts = {};
+
+  for (let i = 0; i < nums.length; i++) {
+    let count = counts[nums[i]] || 0;
+    if (count < 2) {
+      counts[nums[i]] = (counts[nums[i]] || 0) + 1;
+    } else {
+      nums.splice(i, 1);
+    }
+  }
+
+  console.log(nums);
+  return nums.length;
+};
