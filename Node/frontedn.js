@@ -200,3 +200,7 @@ myList.append(1);
 myList.append(2);
 myList.append(3);
 myList.display(); // Output: 1, 2, 3
+function sayHello() {
+  const message = "Hello!";
+  console.log(message);
+}
