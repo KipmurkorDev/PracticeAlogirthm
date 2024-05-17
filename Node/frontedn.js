@@ -232,3 +232,17 @@ function outerOuterFunction() {
     }
   }
 }
+const a = 1;
+function x() {
+  const b = 2;
+  function y() {
+    const c = 3;
+    function z() {
+      const d = 4;
+    }
+    z();
+  }
+  y();
+}
+
+x();
