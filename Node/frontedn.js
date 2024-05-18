@@ -305,3 +305,22 @@ const donut13 = "glazed donut holes";
 const donut14 = "blueberry donut holes";
 const donut15 = "cake donut holes";
 const donut16 = "chocolate donut holes";
+const donuts = [
+  // start of the array
+  "glazed", // each element separated by a comma
+  "chocolate frosted",
+  "cinnamon",
+  "sprinkled",
+  "powdered",
+  "cinnamon sugar",
+  "glazed cruller",
+  "chocolate cruller",
+  "cookies",
+  "Boston creme",
+  "powdered jelly filled",
+  "creme de leche",
+  "glazed donut holes",
+  "blueberry donut holes",
+  "cake donut holes",
+  "chocolate donut holes",
+]; //
