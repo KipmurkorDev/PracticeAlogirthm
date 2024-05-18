@@ -270,3 +270,22 @@ console.log("Outside the function scope:");
 console.log(x);
 console.log(y);
 console.log(z);
+const donuts = [
+  // start of the array
+  "glazed", // each element separated by a comma
+  "chocolate frosted",
+  "cinnamon",
+  "sprinkled",
+  "powdered",
+  "cinnamon sugar",
+  "glazed cruller",
+  "chocolate cruller",
+  "cookies",
+  "Boston creme",
+  "powdered jelly filled",
+  "creme de leche",
+  "glazed donut holes",
+  "blueberry donut holes",
+  "cake donut holes",
+  "chocolate donut holes",
+]; // end of the array
