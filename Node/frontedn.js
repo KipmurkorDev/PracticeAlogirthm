@@ -270,7 +270,7 @@ console.log("Outside the function scope:");
 console.log(x);
 console.log(y);
 console.log(z);
-const donuts = [
+const donuts10 = [
   // start of the array
   "glazed", // each element separated by a comma
   "chocolate frosted",
