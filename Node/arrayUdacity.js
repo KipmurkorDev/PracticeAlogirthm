@@ -22,3 +22,12 @@ console.log(array2.copyWithin(0, 3, 4));
 // Copy to index 1 all elements from index 3 to the end
 console.log(array1.copyWithin(1, 3));
 // Expected output: Array ["d", "d", "e", "d", "e"]
+
+const array3 = [1, 2, 3];
+
+const firstElement = array1.shift();
+
+console.log(array1);
+// Expected output: Array [2, 3]
+
+console.log(firstElement);
