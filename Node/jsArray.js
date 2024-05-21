@@ -56,3 +56,10 @@ const newArray = myArray.map(function (elem) {
 });
 
 console.log(newArray); //[101, 102, 103, 104, 105]
+const donuts4 = ["jelly donut", "chocolate donut", "glazed donut"];
+
+const improvedDonuts = donuts.map(function (donut) {
+  donut += " hole";
+  donut = donut.toUpperCase();
+  return donut;
+});
