@@ -69,3 +69,13 @@ for (let r = 0; r < grid.length; r++) {
     console.log(grid[r][c]);
   }
 }
+const donutBox = [
+  ["glazed", "chocolate glazed", "cinnamon"],
+  ["powdered", "sprinkled", "glazed cruller"],
+  ["chocolate cruller", "Boston creme", "creme de leche"],
+];
+
+// here, donutBox.length refers to the number of rows of donuts
+for (let row = 0; row < donutBox.length; row++) {
+  console.log(donutBox[row]);
+}
