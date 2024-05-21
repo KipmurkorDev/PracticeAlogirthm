@@ -5,7 +5,7 @@ const arraysInArrays = [
   ["Julia", "James"],
   [true, false, true, false],
 ];
-const donuts2 = [
+const donuts2  = [
   "glazed", // index is 0
   "chocolate frosted", // index is 1
   "cinnamon", // index is 2
