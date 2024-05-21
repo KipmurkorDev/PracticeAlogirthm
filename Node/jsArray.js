@@ -50,3 +50,9 @@ for (let i = 0; i < myArray.length; i = i + 2) {
     break;
   }
 }
+const newArray = myArray.map(function (elem) {
+  elem = elem + 100;
+  return elem;
+});
+
+console.log(newArray); //[101, 102, 103, 104, 105]
