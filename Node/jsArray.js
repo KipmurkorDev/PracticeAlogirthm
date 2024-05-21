@@ -42,3 +42,11 @@ const team4 = [
   "Ron Weasley",
   "Neville Longbottom",
 ];
+const myArray = [1, 2, 3, 4, 5];
+
+for (let i = 0; i < myArray.length; i = i + 2) {
+  console.log(myArray[i]);
+  if (i === 2) {
+    break;
+  }
+}
