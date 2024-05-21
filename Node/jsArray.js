@@ -63,3 +63,9 @@ const improvedDonuts = donuts.map(function (donut) {
   donut = donut.toUpperCase();
   return donut;
 });
+
+for (let r = 0; r < grid.length; r++) {
+  for (let c = 0; c < grid[r].length; c++) {
+    console.log(grid[r][c]);
+  }
+}
