@@ -8,7 +8,14 @@ const donuts = [
   "powdered",
 ];
 
-donuts.pop(); // pops "powdered" off the end of the `donuts` array
-donuts.pop(); // pops "sprinkled" off the end of the `donuts` array
 donuts.pop();
-Returns: "cinnamon sugar";
+donuts.pop();
+donuts.pop();
+// return "cinnamon sugar";
+const donuts2 = [
+  "glazed",
+  "chocolate frosted",
+  "Boston creme",
+  "glazed cruller",
+];
+donuts2.splice(1, 1, "chocolate cruller", "creme de leche");
