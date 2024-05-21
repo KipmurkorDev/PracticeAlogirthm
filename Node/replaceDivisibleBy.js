@@ -28,3 +28,11 @@ const replaceOddAndEven = (arr) => {
 };
 
 console.log(replaceOddAndEven(numbers));
+const sister = {
+  name: "Sarah",
+  age: 23,
+  parents: ["Alice", "Andy"],
+  siblings: ["Julia"],
+  favoriteColor: "purple",
+  pets: true,
+};
