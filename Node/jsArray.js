@@ -63,3 +63,19 @@ const improvedDonuts = donuts.map(function (donut) {
   donut = donut.toUpperCase();
   return donut;
 });
+
+for (let r = 0; r < grid.length; r++) {
+  for (let c = 0; c < grid[r].length; c++) {
+    console.log(grid[r][c]);
+  }
+}
+const donutBox = [
+  ["glazed", "chocolate glazed", "cinnamon"],
+  ["powdered", "sprinkled", "glazed cruller"],
+  ["chocolate cruller", "Boston creme", "creme de leche"],
+];
+
+// here, donutBox.length refers to the number of rows of donuts
+for (let row = 0; row < donutBox.length; row++) {
+  console.log(donutBox[row]);
+}
