@@ -14,3 +14,11 @@ function Sparrow(name) {
   this.kingdom = "Animalia";
   this.name = name;
 }
+const building = {
+  floors: 5,
+  addFloor: function () {
+    this.floors += 1;
+  },
+};
+
+building.addFloor();
