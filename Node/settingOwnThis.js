@@ -30,3 +30,12 @@ const bear = {
   claws: true,
   diet: "carnivore",
 };
+function PolarBear() {
+  // ...
+}
+
+PolarBear.prototype = bear;
+const snowball = new PolarBear();
+
+snowball.color = "white";
+snowball.favoriteDrink = "cola";
