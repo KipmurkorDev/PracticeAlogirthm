@@ -39,3 +39,13 @@ const snowball = new PolarBear();
 
 snowball.color = "white";
 snowball.favoriteDrink = "cola";
+function Car(color, year) {
+  this.color = color;
+  this.year = year;
+}
+
+Car.prototype.drive = function () {
+  console.log("Vroom vroom!");
+};
+
+const car = new Car("silver", 1988);
