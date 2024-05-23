@@ -49,3 +49,10 @@ Car.prototype.drive = function () {
 };
 
 const car = new Car("silver", 1988);
+let target = {};
+
+let source = { number: 7 };
+
+Object.assign(target, source);
+
+console.log(target);
