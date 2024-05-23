@@ -70,3 +70,21 @@ const otter = {
 const platypus = Object.assign({}, duck, beaver, otter);
 
 console.log(platypus);
+function City(name, population) {
+  this.name = name;
+  this.population = population;
+
+  this.identify = function () {
+    console.log(`${this.name}'s population is ${this.population}.`);
+  };
+}
+const sanFrancisco = new City("San Francisco", 870000);
+
+console.log(sanFrancisco);
+// {
+//   name: 'San Francisco',
+//   population: 870000,
+//   identify: function () {
+//     console.log(`${this.name}'s population is ${this.population}.`);
+//   };
+// }
