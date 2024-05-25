@@ -16,3 +16,9 @@ const timon = Object.assign({}, person);
 
 const myprotype = Object.getPrototypeOf(emmanuel);
 const isPropert = person.hasOwnProperty(education);
+let developer = {
+  name: "Veronika",
+  getName: function () {
+    return this.name;
+  },
+};
