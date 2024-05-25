@@ -29,3 +29,12 @@ developer.getName();
 
 developer.name;
 // 'Not Veronika'
+
+function instantiateDeveloper() {
+  return {
+    name: "Veronika",
+    getName: function () {
+      return this.name;
+    },
+  };
+}
