@@ -22,3 +22,10 @@ let developer = {
     return this.name;
   },
 };
+developer.name = "Not Veronika";
+
+developer.getName();
+// 'Not Veronika'
+
+developer.name;
+// 'Not Veronika'
